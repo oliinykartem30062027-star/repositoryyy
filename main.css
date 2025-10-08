@@ -1,0 +1,139 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+
+.navbar {
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-nav .nav-link {
+  color: var(--bs-dark) !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: var(--bs-primary) !important;
+}
+
+
+.hero-image {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+#heroSection h1 {
+  line-height: 1.2;
+}
+
+#heroSection .btn-primary {
+  box-shadow: 0 0 15px rgba(13, 110, 253, 0.3);
+  transition: all 0.3s ease;
+}
+
+#heroSection .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.4);
+}
+
+
+#about .btn {
+  transition: all 0.3s ease;
+}
+
+#about .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.25);
+}
+
+
+#features .d-flex {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#features .d-flex:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+#pricing .card {
+  transition: all 0.4s ease;
+}
+
+#pricing .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.faq-item {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #f8f9fa;
+}
+
+.faq-item i {
+  transition: transform 0.3s ease;
+}
+
+.faq-item .collapse.show + i,
+.faq-item[aria-expanded="true"] i {
+  transform: rotate(90deg);
+}
+
+
+form .form-control {
+  border-radius: 0.5rem;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+form .form-control:focus {
+  border-color: var(--bs-primary);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+
+footer a.text-secondary:hover {
+  color: var(--bs-primary) !important;
+}
+
+footer .rounded-circle:hover {
+  background-color: var(--bs-primary) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
